@@ -1,1 +1,46 @@
-<p>Hello World!</p>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>オセロゲーム</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>オセロゲーム</h1>
+        <div class="game-info">
+            <div class="turn-indicator">
+                <span id="current-player">黒</span>の番です
+            </div>
+            <div class="score">
+                <div class="score-item">
+                    <span class="score-label">黒：</span>
+                    <span id="black-score">2</span>
+                </div>
+                <div class="score-item">
+                    <span class="score-label">白：</span>
+                    <span id="white-score">2</span>
+                </div>
+            </div>
+        </div>
+        <div class="board-container">
+            <div id="game-board" class="board">
+                <!-- マス目は JavaScript で動的に生成 -->
+            </div>
+        </div>
+        <div class="controls">
+            <button id="restart-btn" class="btn">ゲームリセット</button>
+            <button id="hint-btn" class="btn">ヒント表示</button>
+        </div>
+        <div id="game-over" class="game-over hidden">
+            <div class="game-over-content">
+                <h2 id="winner-text">ゲーム終了</h2>
+                <div id="final-score"></div>
+                <button id="new-game-btn" class="btn">新しいゲーム</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
